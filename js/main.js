@@ -100,6 +100,10 @@ $(document).keydown(function(evevt){
 				setTimeout(updateView,200);
 			//	console.log(nums);
 				randomnumber(selection,nums,words);
+			}else{
+				if(gameOver()){
+					alert("游戏结束，请重新开始游戏！");
+				}
 			}
 			break;
 		case 38://上
@@ -108,6 +112,10 @@ $(document).keydown(function(evevt){
 				setTimeout(updateView,200);
 				//console.log(nums);
 				randomnumber(selection,nums,words);
+			}else{
+				if(gameOver()){
+					alert("游戏结束，请重新开始游戏！");
+				}
 			}
 			break;
 		case 39://右
@@ -116,6 +124,10 @@ $(document).keydown(function(evevt){
 				setTimeout(updateView,200);
 				//console.log(nums);
 				randomnumber(selection,nums,words);
+			}else{
+				if(gameOver()){
+					alert("游戏结束，请重新开始游戏！");
+				}
 			}			
 			break;
 		case 40://下
@@ -124,6 +136,10 @@ $(document).keydown(function(evevt){
 				setTimeout(updateView,200);
 				//console.log(nums);
 				randomnumber(selection,nums,words);
+			}else{
+				if(gameOver()){
+					alert("游戏结束，请重新开始游戏！");
+				}
 			}			
 			break;
 		default:break;
@@ -308,4 +324,11 @@ function MoveDown(){
 			}
 		}
 	}
+}
+
+function gameOver(){
+   if(!canMoveLeft(nums) && !canMoveUp(nums) && !canMoveRight(nums) && !canMoveDown(nums)){
+	   return true;
+   }
+	return false;
 }
