@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>2048小游戏</title>
+<script type="text/javascript" src="jquery-3.4.1/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="js/common.js"></script><!--多次公用-->
+<script type="text/javascript" src="js/animate.js"></script><!--动画效果-->
+<script type="text/javascript" src="js/main.js"></script><!--主要设置-->
+<link rel="stylesheet" type="text/css" href="css/style.css"><!--样式-->
+</head>
+
+<body style="background: rgba(233,213,176,1.00);">
+	<div id="head">
+		<h1 class="header">2048小游戏</h1>
+		<h3 class="creater">--by ywt</h3>
+		<div class="wrapper">		
+			<div class="wrapper-score">
+				<span id="text">分数: </span><span id="score">0</span>
+			</div>
+			<div  class="wrapper-newgame">
+				<a href="#" id="newgame" onClick="newgame()">New Game</a>
+			</div>
+		</div>
+
+		<div class="select">
+			<div>请选择模式：</div>
+			<select id="selected" onChange="typeofgame(this)">
+				<option id="selected0" value="0" selected="selected">2048</option>
+				<option id="selected1" value="1">明朝妃嫔晋升记</option>
+				<option id="selected2" value="2">朝代</option>
+			</select>
+		</div>
+<!--		游戏整体部分-->
+		<div id="game">	
+<!--			底层一排-->
+			<div class="grid-cell" id="g0-0"></div>
+			<div class="grid-cell" id="g0-1"></div>
+			<div class="grid-cell" id="g0-2"></div>
+			<div class="grid-cell" id="g0-3"></div>
+			
+			<div class="grid-cell" id="g1-0"></div>
+			<div class="grid-cell" id="g1-1"></div>
+		
+			<div class="grid-cell" id="g1-2"></div>
+			<div class="grid-cell" id="g1-3"></div>
+			
+			
+			<div class="grid-cell" id="g2-0"></div>
+			<div class="grid-cell" id="g2-1"></div>
+			<div class="grid-cell" id="g2-2"></div>
+			<div class="grid-cell" id="g2-3"></div>
+			
+			<div class="grid-cell" id="g3-0"></div>
+			<div class="grid-cell" id="g3-1"></div>
+			<div class="grid-cell" id="g3-2"></div>
+			<div class="grid-cell" id="g3-3"></div>			
+		</div>
+	</div>
+</body>
+</html>
